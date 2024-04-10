@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  background-image: url('./img/musicbg.jpg'); 
+  background-size: cover; 
+  background-position: center; 
+}
+
+
+.player-container {
+  height: 500px;
+  width: 400px;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(to bottom, #59C4D6 0%, #193A8B 100%); 
+}
+
+
+.img-container {
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+  position: relative;
+  top: -50px;
+  left: 50px;
+}
+
+.img-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 5px 30px 5px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+  font-size: 25px;
+  text-align: center;
+  margin: 0;
+}
+
+h3 {
+  font-size: 20px;
+  text-align: center;
+  font-weight: 400;
+  margin: 5px 0 0;
+}
+
+/* Progress */
+.progress-container {
+  background: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 40px 20px;
+  height: 6px;
+  width: 90%;
+}
+
+.progress {
+  background: #242323;
+  border-radius: 5px;
+  height: 100%;
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+.duration-wrapper {
+  position: relative;
+  top: -25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Controls */
+.player-controls {
+  position: relative;
+  top: -15px;
+  left: 120px;
+  width: 200px;
+}
+
+.fas {
+  font-size: 30px;
+  color: rgb(0, 0, 0);
+  margin-right: 30px;
+  cursor: pointer;
+  user-select: none;
+  transition: ease 0.2s;
+}
+
+.fas:hover {
+  opacity: 0.7; 
+  transition: opacity 0.2s ease;
+}
+
+
+.main-button {
+  font-size: 40px;
+  position: relative;
+  top: 3px;
+}
+
+/* mobile */
+@media screen and (max-width: 376px) {
+  .player-container {
+    width: 95vw;
+  }
+
+  .img-container {
+    left: 29px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 15px;
+  }
+
+  .player-controls {
+    top: -10px;
+    left: 100px;
+  }
+}
+#marquee-container {
+  width: 100%;
+  background-color: #193A8B; 
+  padding: 10px 0; 
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#moving-text {
+  display: inline-block;
+  white-space: nowrap;
+  color: white;
+  animation: moveText 30s linear infinite;
+  font-size: 15px; 
+}
+
+
+@keyframes moveText {
+  0% {
+      transform: translateX(100%);
+  }
+  100% {
+      transform: translateX(-100%);
+  }
+}

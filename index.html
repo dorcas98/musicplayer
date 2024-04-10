@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="icon" href="https://i.ibb.co/5hrScRD/music-player.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="marquee-container">
+        <div id="moving-text">This project is developed by OYEDEJI ANUOLUWAPO DORCAS; a student of SQi, Ogbomoso, Oyo State.&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp LEVEL: Level 2.  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   Student ID: 230870</div>
+    </div>
+    
+    
+    <main class="player-container">
+        <header class="img-container">
+            <img src="" alt="Album Art">
+        </header>
+        <section class="song-info">
+            <h2 id="title"></h2>
+            <h3 id="artist"></h3>
+            <audio src=""></audio>
+        </section>
+        <section class="progress-container" id="progress-container">
+            <div class="progress" id="progress"></div>
+            <div class="duration-wrapper">
+                <span id="current-time">0:00</span>
+                <span id="duration"></span>
+            </div>
+        </section>
+        <section class="controls-container">
+            <div class="player-controls">
+                <i class="fas fa-backward" id="prev" title="Previous"></i>
+                <i class="fas fa-play main-button" id="play" title="Play"></i>
+                <i class="fas fa-forward" id="next" title="Next"></i>
+            </div>
+            <ul class="playlist">
+                
+            </ul>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
